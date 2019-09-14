@@ -1,0 +1,10 @@
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/camera_settings_frag">
+
+    <PreferenceCategory android:title="Vehicle Camera Settings">
+
+
+
+    </PreferenceCategory>
+
+</PreferenceScreen>

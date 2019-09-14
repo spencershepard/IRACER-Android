@@ -1,0 +1,61 @@
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/connection_settings_frag">
+
+    <PreferenceCategory android:title="Connection">
+    <Preference android:title="Connect/Disconnect"
+        android:key="connect"
+        android:icon="@drawable/wifi_icon"
+        android:summary="Manually connect or disconnect if automatic connection fails."/>
+    </PreferenceCategory>
+
+    <PreferenceCategory android:title="Connection Settings">
+
+        <EditTextPreference
+            android:id="@+id/vehicle_ip_pref"
+            android:inputType="numberDecimal"
+            android:key="vehicle_ip"
+            android:singleLine="true"
+            android:title="Vehicle IP Address" />
+        <EditTextPreference
+            android:id="@+id/vehicle_coms_port_pref"
+            android:inputType="numberDecimal"
+            android:digits="0123456789"
+            android:key="vehicle_coms_port"
+            android:singleLine="true"
+            android:title="Vehicle Coms Port" />
+        <EditTextPreference
+            android:id="@+id/vehicle_camera_port_pref"
+            android:inputType="numberDecimal"
+            android:digits="0123456789"
+            android:key="vehicle_cam_port"
+            android:singleLine="true"
+            android:summary="Currently hardcoded as 5000."
+            android:title="Vehicle Camera Port" />
+        <EditTextPreference
+            android:id="@+id/game_server_port_pref"
+            android:inputType="numberDecimal"
+            android:digits="0123456789"
+            android:key="game_server_port"
+            android:singleLine="true"
+            android:summary="Currently hardcoded as 5003."
+            android:title="Game Server Port" />
+        <EditTextPreference
+            android:id="@+id/max_bitrate"
+            android:inputType="numberDecimal"
+            android:digits="0123456789"
+            android:key="max_video_bitrate"
+            android:singleLine="true"
+            android:summary=""
+            android:title="Maximum Video Bitrate" />
+        <EditTextPreference
+            android:id="@+id/min_bitrate"
+            android:inputType="numberDecimal"
+            android:digits="0123456789"
+            android:key="min_video_bitrate"
+            android:singleLine="true"
+            android:summary=""
+            android:title="Minimum Video Bitrate" />
+
+    </PreferenceCategory>
+
+</PreferenceScreen>

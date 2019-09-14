@@ -1,0 +1,619 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/black"
+    tools:context=".game_menu">
+
+
+    <LinearLayout
+        android:id="@+id/game_inprogress_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="10dp"
+        android:visibility="invisible">
+
+        <TextView
+            android:id="@+id/game_inprogress_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:fontFamily="serif-monospace"
+            android:text="Game In Progress"
+            android:textColor="@android:color/holo_orange_light"
+            android:textSize="24sp" />
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center_vertical"
+                android:layout_margin="10dp"
+                android:orientation="vertical"
+                android:padding="30dp">
+
+
+                <Button
+                    android:id="@+id/quit_game_btn"
+                    style="@style/Widget.AppCompat.Button.Colored"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="right"
+                    android:layout_margin="20dp"
+                    android:background="@android:color/holo_orange_dark"
+                    android:padding="5dp"
+                    android:text="Quit Game"
+                    android:textColor="@android:color/white" />
+
+            </LinearLayout>
+        </ScrollView>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/game_menu_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="10dp"
+        android:visibility="invisible">
+
+        <TextView
+            android:id="@+id/game_menu_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:fontFamily="serif-monospace"
+            android:text="Games"
+            android:textColor="@android:color/holo_orange_light"
+            android:textSize="24sp" />
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center_vertical"
+                android:layout_margin="10dp"
+                android:orientation="vertical"
+                android:padding="30dp">
+
+
+                <EditText
+                    android:id="@+id/player_name_edit"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:background="@android:color/darker_gray"
+                    android:backgroundTint="#535353"
+                    android:backgroundTintMode="multiply"
+                    android:cursorVisible="false"
+                    android:ems="10"
+                    android:gravity="center_horizontal"
+                    android:hint="Player name"
+                    android:inputType="textPersonName"
+                    android:padding="5dp"
+                    android:singleLine="true" />
+
+                <Button
+                    android:id="@+id/solo_button"
+                    style="@style/Widget.AppCompat.Button.Colored"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="right"
+                    android:layout_margin="10dp"
+                    android:background="@android:color/holo_orange_dark"
+                    android:padding="5dp"
+                    android:text="Solo Race"
+                    android:textColor="@android:color/white" />
+
+                <Button
+                    android:id="@+id/join_multiplayer_btn"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="left"
+                    android:layout_margin="10dp"
+                    android:background="@android:color/holo_orange_dark"
+                    android:padding="5dp"
+                    android:text="Join Multiplayer Race" />
+
+                <Button
+                    android:id="@+id/host_multiplayer_btn"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="left"
+                    android:layout_margin="10dp"
+                    android:background="@android:color/holo_orange_dark"
+                    android:padding="5dp"
+                    android:text="Host Multiplayer Race" />
+
+            </LinearLayout>
+        </ScrollView>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/solo_race_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="10dp"
+        android:visibility="invisible">
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:fontFamily="serif-monospace"
+            android:text="Solo Race"
+            android:textColor="@android:color/holo_orange_light"
+            android:textSize="24sp" />
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:orientation="vertical"
+                android:padding="30dp">
+
+                <TextView
+                    android:id="@+id/textView3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="monospace"
+                    android:text="Race against the clock to beat your best lap times around your custom track.  You will need a Start/Finish line and a Midpoint line. Boost pads are enabled."
+                    android:textAlignment="center"
+                    android:textSize="18sp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/textView2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Laps" />
+
+                    <EditText
+                        android:id="@+id/laps_edit_text"
+                        style="@style/Widget.AppCompat.EditText"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:ems="10"
+                        android:inputType="number"
+                        android:maxLength="2"
+                        android:singleLine="true"
+                        android:text="5" />
+                </LinearLayout>
+
+                <View
+                    android:id="@+id/divider"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:alpha="0.4"
+                    android:background="?android:attr/listDivider" />
+
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <Button
+                        android:id="@+id/solo_start_btn"
+                        style="@style/Widget.AppCompat.Button.Colored"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="right"
+                        android:background="@android:color/holo_orange_dark"
+                        android:padding="5dp"
+                        android:text="Start Race"
+                        android:textColor="@android:color/white" />
+
+                    <Button
+                        android:id="@+id/solo_cancel_btn"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="left"
+                        android:background="@android:color/holo_orange_dark"
+                        android:padding="5dp"
+                        android:text="Cancel" />
+                </FrameLayout>
+
+            </LinearLayout>
+        </ScrollView>
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/mp_client_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="10dp"
+        android:visibility="invisible">
+
+        <TextView
+            android:id="@+id/mp_client_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:fontFamily="serif-monospace"
+            android:text="Join Multiplayer Game"
+            android:textColor="@android:color/holo_orange_light"
+            android:textSize="24sp" />
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:orientation="vertical"
+                android:padding="30dp">
+
+                <TextView
+                    android:id="@+id/mp_client_description"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="monospace"
+                    android:text="Find a game to join on your network."
+                    android:textAlignment="center"
+                    android:textSize="18sp" />
+
+                <TextView
+                    android:id="@+id/textView4"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="15dp"
+                    android:text="Available Hosts:" />
+
+
+                <LinearLayout
+                    android:id="@+id/game_hosts"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"></LinearLayout>
+
+                <Button
+                    android:id="@+id/refresh_btn"
+                    style="@style/Widget.AppCompat.Button.Colored"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="right"
+                    android:layout_marginTop="20dp"
+                    android:background="@android:color/holo_orange_dark"
+                    android:padding="5dp"
+                    android:text="Search"
+                    android:textColor="@android:color/white" />
+
+            </LinearLayout>
+        </ScrollView>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/mp_client_lobby"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="10dp"
+        android:visibility="visible">
+
+        <TextView
+            android:id="@+id/multiplayer_lobby_titile"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:fontFamily="serif-monospace"
+            android:text="Multiplayer Lobby"
+            android:textColor="@android:color/holo_orange_light"
+            android:textSize="24sp" />
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:orientation="vertical"
+                android:padding="30dp">
+
+                <TextView
+                    android:id="@+id/mp_lobby_description"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15dp"
+                    android:fontFamily="monospace"
+                    android:text="Waiting for the host to start the game"
+                    android:textAlignment="center"
+                    android:textSize="18sp" />
+
+                <LinearLayout
+                    android:id="@+id/game_details"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="20dp"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="10dp"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/game_type_label"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="Game type:" />
+
+                        <TextView
+                            android:id="@+id/game_type_tv"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="game type"
+                            android:textAlignment="center"
+                            android:textSize="18sp" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/game_details_label"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="10dp"
+                            android:layout_weight="1"
+                            android:text="Laps:" />
+
+                        <TextView
+                            android:id="@+id/game_details_tv"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="game details" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="10dp"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/host_label"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="left"
+                            android:layout_weight="1"
+                            android:text="Host:" />
+
+                        <TextView
+                            android:id="@+id/lobby_host"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="right"
+                            android:text="host" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/players_label"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="left"
+                            android:layout_weight="1"
+                            android:text="Players:" />
+
+                        <TextView
+                            android:id="@+id/players_tv"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="right"
+                            android:text="players" />
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="100px"
+                    android:orientation="horizontal"
+                    android:visibility="invisible">
+
+
+                    <Button
+                        android:id="@+id/lobby_ready_btn"
+                        style="@style/Widget.AppCompat.Button.Colored"
+                        android:layout_width="500px"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="right"
+                        android:layout_margin="30px"
+                        android:background="@android:color/holo_orange_dark"
+                        android:padding="5dp"
+                        android:text="Ready"
+                        android:textColor="@android:color/white" />
+
+                    <Button
+                        android:id="@+id/lobby_quit_btn"
+                        style="@style/Widget.AppCompat.Button.Colored"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="right"
+                        android:background="@android:color/holo_red_dark"
+                        android:padding="5dp"
+                        android:text="Quit"
+                        android:textColor="@android:color/white" />
+                </LinearLayout>
+
+
+            </LinearLayout>
+        </ScrollView>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/mp_host_lobby"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="10dp"
+        android:visibility="invisible">
+
+
+        <TextView
+            android:id="@+id/multiplayer_host_lobby_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:fontFamily="serif-monospace"
+            android:text="Multiplayer Lobby"
+            android:textColor="@android:color/holo_orange_light"
+            android:textSize="24sp" />
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:orientation="vertical"
+                android:padding="30dp">
+
+                <TextView
+                    android:id="@+id/mp_host_lobby_description"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="20px"
+                    android:fontFamily="monospace"
+                    android:text="Waiting for you to start the game."
+                    android:textAlignment="center"
+                    android:textSize="18sp" />
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="20px"
+                    android:layout_marginBottom="20px"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/textView5"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Game type:"
+                        android:textColor="@android:color/darker_gray"
+                        android:textSize="18sp" />
+
+                    <Spinner
+                        android:id="@+id/gametype_spinner"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:entries="@array/mp_host_gametypes_spinner" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="20px"
+                    android:layout_marginBottom="20px"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/textView6"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Laps:"
+                        android:textColor="@android:color/darker_gray"
+                        android:textSize="18sp"
+                        tools:text="Laps" />
+
+                    <Spinner
+                        android:id="@+id/laps_spinner"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:entries="@array/mp_host_racelaps_spinner" />
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/host_lobby_players"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="Waiting for players to join..."
+                    android:textAlignment="center" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="100px"
+                    android:orientation="horizontal">
+
+                    <Button
+                        android:id="@+id/host_lobby_ready_btn"
+                        style="@style/Widget.AppCompat.Button.Colored"
+                        android:layout_width="500px"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="right"
+                        android:layout_margin="30px"
+                        android:background="@android:color/holo_orange_dark"
+                        android:padding="5dp"
+                        android:text="Start Game"
+                        android:textColor="@android:color/white" />
+
+                    <Button
+                        android:id="@+id/host_quit_btn"
+                        style="@style/Widget.AppCompat.Button.Colored"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="right"
+                        android:background="@android:color/holo_red_dark"
+                        android:padding="5dp"
+                        android:text="Quit"
+                        android:textColor="@android:color/white" />
+                </LinearLayout>
+
+
+            </LinearLayout>
+        </ScrollView>
+
+    </LinearLayout>
+
+
+</FrameLayout>

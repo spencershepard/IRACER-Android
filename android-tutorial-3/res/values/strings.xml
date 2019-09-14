@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">iRacer</string>
+    <string name="button_play">Play</string>
+    <string name="button_stop">Stop</string>
+    <string name="no_video">No video to display.  Is your vehicle on?</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+</resources>

@@ -1,0 +1,76 @@
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/vehicle_settings_frag">
+
+    <PreferenceCategory android:title="System Commands">
+
+    <Preference android:title="Shutdown"
+        android:key="shutdown"
+        android:icon="@android:drawable/ic_dialog_alert"
+        android:summary="Issue shutdown command before disconnecting the battery."/>
+
+        <Preference android:title="Reboot"
+            android:key="reboot"
+            android:summary="Issue reboot command to connected vehicle."/>
+
+    </PreferenceCategory>
+
+    <PreferenceCategory android:title="Motor Performance">
+        <SwitchPreferenceCompat
+            android:id="@+id/boost_pref_switch"
+            android:defaultValue="false"
+            android:key="boost_pref"
+            android:title="Boost Pads"
+            android:summary="Turn speed boost pads on or off."/>
+
+        <EditTextPreference
+            android:id="@+id/max_speed_pref"
+            android:inputType="numberDecimal"
+            android:digits="0123456789"
+            android:key="max_speed"
+            android:singleLine="false"
+            android:summary="Default: 3300. Recommended: 3000-10000"
+            android:title="Maximum Speed" />
+        <EditTextPreference
+            android:id="@+id/min_speed_pref"
+            android:inputType="numberDecimal"
+            android:digits="0123456789"
+            android:key="min_speed"
+            android:singleLine="false"
+            android:summary="Minimum motor signal to prevent motor stall. Recommended 1800-2200"
+            android:title="Minimum Speed" />
+
+
+    </PreferenceCategory>
+
+    <PreferenceCategory android:title="Steering Performance">
+        <EditTextPreference
+            android:id="@+id/servo_center_pref"
+            android:inputType="numberDecimal"
+            android:digits="0123456789"
+            android:key="servo_center"
+            android:singleLine="false"
+            android:summary="Idle servo (trim) signal. eg. 1450-1550"
+            android:title="Servo Center" />
+        <EditTextPreference
+            android:id="@+id/servo_max_pref"
+            android:inputType="numberDecimal"
+            android:digits="0123456789"
+            android:key="servo_max"
+            android:singleLine="false"
+            android:summary="Servo maximum (left) signal. eg. 1800-2200"
+            android:title="Servo Max" />
+        <EditTextPreference
+            android:id="@+id/servo_min_pref"
+            android:inputType="numberDecimal"
+            android:digits="0123456789"
+            android:key="servo_min"
+            android:singleLine="false"
+            android:summary="Servo minimum (right) signal. eg. 800-1200"
+            android:title="Servo Min" />
+
+
+    </PreferenceCategory>
+
+
+
+</PreferenceScreen>

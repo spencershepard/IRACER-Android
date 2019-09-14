@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android" >
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/game_menu"
+            android:icon="@drawable/icon_game_controller"
+            android:title="Games" />
+        <item
+            android:id="@+id/nav_vehicle"
+            android:icon="@drawable/wheel_icon"
+            android:title="Vehicle" />
+        <item
+            android:id="@+id/nav_connection"
+            android:icon="@drawable/wifi_icon"
+            android:title="Connection" />
+        <item
+            android:id="@+id/nav_development"
+            android:icon="@android:drawable/btn_star"
+            android:title="Development" />
+        <item
+            android:id="@+id/nav_close"
+            android:icon="@drawable/exit"
+            android:title="Exit Menu" />
+
+
+    </group>
+</menu>

@@ -1,0 +1,45 @@
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/development_settings_frag">
+
+    <PreferenceCategory android:title="Developer Settings">
+
+
+
+        <SwitchPreferenceCompat
+            android:id="@+id/development_buttons"
+            android:defaultValue="false"
+            android:key="development_buttons"
+            android:title="Enable Development Buttons"
+            android:summary="Show the hidden buttons used for testing"/>
+
+        <EditTextPreference
+            android:id="@+id/control_loop_pref"
+            android:inputType="numberDecimal"
+            android:digits="0123456789"
+            android:key="control_loop_time"
+            android:singleLine="false"
+            android:summary="Control loop time in milliseconds (50-200)"
+            android:title="Control Loop Time" />
+
+    </PreferenceCategory>
+
+    <PreferenceCategory android:title="Calibration">
+
+        <Preference android:title="Calibrate Start Pad"
+            android:key="cal-finish"
+            android:summary=""/>
+
+        <Preference android:title="Calibrate Gate Pad"
+            android:key="cal-gate"
+            android:summary=""/>
+
+        <Preference android:title="Calibrate Boost Pad"
+            android:key="cal-boost"
+            android:summary=""/>
+
+        <Preference android:title="Calibrate PowerUp Pad"
+            android:key="cal-powerup"
+            android:summary=""/>
+
+    </PreferenceCategory>
+</PreferenceScreen>

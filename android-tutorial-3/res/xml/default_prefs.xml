@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+    <EditTextPreference android:key="max_speed"
+        android:defaultValue="3500"/>
+    <EditTextPreference android:key="min_speed"
+        android:defaultValue="1800"/>
+    <EditTextPreference android:key="servo_min"
+        android:defaultValue="800"/>
+    <EditTextPreference android:key="servo_center"
+        android:defaultValue="1500"/>
+    <EditTextPreference android:key="servo_max"
+        android:defaultValue="2200"/>
+    <EditTextPreference android:key="control_loop_time"
+        android:defaultValue="70"/>
+    <EditTextPreference android:key="vehicle_coms_port"
+        android:defaultValue="5001"/>
+    <EditTextPreference android:key="vehicle_coms_port"
+        android:defaultValue="5001"/>
+    <SwitchPreferenceCompat android:key="boost_pref"
+        android:defaultValue="false"/>
+    <SwitchPreferenceCompat android:key="development_buttons"
+        android:defaultValue="false"/>
+    <EditTextPreference android:key="max_video_bitrate"
+        android:defaultValue="5000000"/>
+    <EditTextPreference android:key="min_video_bitrate"
+        android:defaultValue="500000"/>
+
+
+
+</PreferenceScreen>
