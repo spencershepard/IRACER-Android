@@ -111,7 +111,7 @@
                     android:layout_margin="10dp"
                     android:background="@android:color/holo_orange_dark"
                     android:padding="5dp"
-                    android:text="Solo Race"
+                    android:text="Solo Game"
                     android:textColor="@android:color/white" />
 
                 <Button
@@ -122,7 +122,7 @@
                     android:layout_margin="10dp"
                     android:background="@android:color/holo_orange_dark"
                     android:padding="5dp"
-                    android:text="Join Multiplayer Race" />
+                    android:text="Join Multiplayer Game" />
 
                 <Button
                     android:id="@+id/host_multiplayer_btn"
@@ -132,7 +132,7 @@
                     android:layout_margin="10dp"
                     android:background="@android:color/holo_orange_dark"
                     android:padding="5dp"
-                    android:text="Host Multiplayer Race" />
+                    android:text="Host Multiplayer Game" />
 
             </LinearLayout>
         </ScrollView>
@@ -153,7 +153,7 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
             android:fontFamily="serif-monospace"
-            android:text="Solo Race"
+            android:text="Solo Game"
             android:textColor="@android:color/holo_orange_light"
             android:textSize="24sp" />
 
