@@ -1,9 +1,11 @@
 # iRACER: FPV Android Racing Game with real RC Cars
 
+This project was started in 2018 and is not associated with the PC simulation game. It is no longer an active project but it still works very well.
+
+## Video:
 [![Introducing IRACER](https://img.youtube.com/vi/e1PcXD0_e2s/0.jpg)](https://www.youtube.com/watch?v=e1PcXD0_e2s)
 
 ## Background and technical details
-This project was started in 2018 and is not associated with the PC simulation game. It is no longer an active project but it still works very well.
 
 The protopype cars used an inexpensive RC car chassis with a Raspberry Pi Zero W and a camera.  A color sensor and LED light under the car was used to detect colored mats that represented the start and finish lines as well as Mario Kart inspired power-ups.  
 
